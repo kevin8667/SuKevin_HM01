@@ -5348,6 +5348,7 @@ MonoBehaviour:
   _movementSpeed: 1
   _collectParticles: {fileID: 157481881}
   _collectSound: {fileID: 8300000, guid: 61ce6bde2dd3dbc42be8281f1112d2c5, type: 3}
+  _playerMaterial: {fileID: 2100000, guid: b1310ba89d583b1449ae1c0bf6e5b4f0, type: 2}
 --- !u!54 &967412801
 Rigidbody:
   m_ObjectHideFlags: 0

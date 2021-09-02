@@ -5,8 +5,14 @@ using UnityEngine;
 public class InvincibilityPowerUp : PowerUpBase
 {
     bool _poweredUp = false;
+    [SerializeField] Material _playerMaterial;
 
+    Color _playerColor;
 
+    private void Awake()
+    {
+        _playerColor = _playerMaterial.color;
+    }
 
     protected override void OnTriggerEnter(Collider other)
     {
@@ -32,8 +38,9 @@ public class InvincibilityPowerUp : PowerUpBase
 
     protected override void Powerup(Player player)
     {
-
+        
         player._isInvincible = true;
+        _playerMaterial.color = Color.white;
         Debug.Log("Player is invincible.");
         
         
@@ -41,6 +48,7 @@ public class InvincibilityPowerUp : PowerUpBase
     protected override void PowerDown(Player player) 
     {
         player._isInvincible = false;
+        _playerMaterial.color = _playerColor;
         Debug.Log("Player is not invincible.");
 
         
