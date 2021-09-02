@@ -28,7 +28,11 @@ public class Enemy : MonoBehaviour
 
     protected virtual void PlayerImpact(Player player) 
     {
-        player.DecreaseHealth(_damgeAmount);
+        if(player._isInvincible == false) 
+        {
+            player.DecreaseHealth(_damgeAmount);
+        }
+        
     }
 
     public void ImpactFeedback() 
